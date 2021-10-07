@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".CalculateActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="643dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:gravity="center" >
+
+            <!--<ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="242dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="15dp"
+                app:srcCompat="@drawable/logo_mba" />-->
+
+            <TextView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="logo"
+                android:layout_marginTop="50dp"
+                android:text="Calculate"
+                android:textColor="@color/login_form_details"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numberA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/login_form_details"
+                android:textSize="20sp"
+                android:hint="Please input number A"
+                android:padding="16dp"
+                android:textColorHint="@color/login_form_details" />
+
+            <EditText
+                android:id="@+id/numberB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/login_form_details"
+                android:textSize="20sp"
+                android:hint="Please input number B"
+                android:padding="16dp"
+                android:textColorHint="@color/login_form_details" />
+
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:text="Result"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/btnSummation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_update"
+                android:padding="16dp"
+                android:text="Summation"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnSubtraction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_cancel_bg"
+                android:text="Subtraction"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/btnMultiplication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:text="Multiplication"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/btnDivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:text="Division"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:padding="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

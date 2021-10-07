@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#FFA000</color>
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="yello">#ffb300</color>
+    <color name="dark_green">#247b37</color>
+    <color name="dark_green2">#3eb959</color>
+    <color name="green">#00bfa5</color>
+    <color name="green_light">#00FF0A</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="darkblue">#23283a</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fe104d</color>
+    <color name="dark_blue">#0027FF</color>
+    <color name="red">#FF0000</color>
+    <color name="red_dark">#801b20</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="test">#FFF</color>
+
+    <color name="login_form_details">#ccffffff</color>
+    <color name="login_form_details_light">#1affffff</color>
+    <color name="login_form_details_medium">#66ffffff</color>
+
+    <!-- Color materials for Dark Mode -->
+    <color name="gray_light_DarkMode">#343335</color>
+    <color name="gray_DarkMode">#211e21</color>
+    <color name="gray_dark_DarkMode">#010002</color>
+    <color name="yellow_light_DarkMode">#fef1bd</color>
+    <color name="yellow_DarkMode">#fdd246</color>
+    <color name="yellow_dark_DarkMode">#ffc62c</color>
+
+    <!-- Color materials for Light Mode -->
+    <color name="white_LightMode">#ffffff</color>
+    <color name="gray_LightMode">#dee1de</color>
+    <color name="black_LightMode">#000100</color>
+    <color name="blue_light_LightMode">#0039d3</color>
+    <color name="blue_LightMode">#0133c2</color>
+    <color name="blue_dark_LightMode">#010e3d</color>
+</resources>
