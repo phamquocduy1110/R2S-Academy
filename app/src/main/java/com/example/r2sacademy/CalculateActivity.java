@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class CalculateActivity extends AppCompatActivity implements View.OnClickListener{
 
     private EditText txtNumberA, txtNumberB;
-    private Button btnAdd, btnSub, btnMul, btnDiv;
+    private Button btnAdd, btnSub, btnMul, btnDiv, btnCancel;
     private TextView tvResult;
 
     @Override
@@ -40,7 +41,14 @@ public class CalculateActivity extends AppCompatActivity implements View.OnClick
         btnDiv.setOnClickListener(this);
 
         tvResult = findViewById(R.id.tvResult);
-    }
+
+        btnCancel = findViewById(R.id.btnCancel);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });    }
 
     private void add() {
         int a = Integer.parseInt(txtNumberA.getText().toString());
@@ -72,6 +80,12 @@ public class CalculateActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View view) {
+        if (txtNumberA.getText().toString().isEmpty() && txtNumberB.getText().toString().isEmpty())
+        {
+            Toast.makeText(CalculateActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         switch (view.getId()) {
             case R.id.btnSummation: add();
                 break;

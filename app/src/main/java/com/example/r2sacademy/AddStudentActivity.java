@@ -1,5 +1,6 @@
 package com.example.r2sacademy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.strictmode.NonSdkApiUsedViolation;
 import android.text.Editable;
@@ -19,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AddStudentActivity extends AppCompatActivity {
 
-    private EditText id, fullName, phone, email, gender, address, birthdate;
+    private EditText fullName, phone, email, gender, address, birthdate;
     private Button btnAdd, btnCancel;
 
     @Override
@@ -32,7 +33,6 @@ public class AddStudentActivity extends AppCompatActivity {
 
     public void init() {
         // initializing our views
-        id = findViewById(R.id.txtID);
         fullName = findViewById(R.id.txtFullName);
         phone = findViewById(R.id.txtPhone);
         email = findViewById(R.id.txtEmail);
@@ -54,15 +54,14 @@ public class AddStudentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // validating if the text field is empty or not.
-                if (id.getText().toString().isEmpty() && fullName.getText().toString().isEmpty() && phone.getText().toString().isEmpty() &&
+                if (fullName.getText().toString().isEmpty() && phone.getText().toString().isEmpty() &&
                 email.getText().toString().isEmpty() && gender.getText().toString().isEmpty() && address.getText().toString().isEmpty() && birthdate.getText().toString().isEmpty())
                 {
                     Toast.makeText(AddStudentActivity.this, "Please enter all of values", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 // calling a method to post the data and passing our value
-                postData(id.getText().toString(),
-                        fullName.getText().toString(),
+                postData(fullName.getText().toString(),
                         phone.getText().toString(),
                         email.getText().toString(),
                         gender.getText().toString(),
@@ -72,7 +71,7 @@ public class AddStudentActivity extends AppCompatActivity {
         });
     }
 
-    private void postData(String id, String fullName, String phone, String email, String gender, String address, String birthdate) {
+    private void postData(String fullName, String phone, String email, String gender, String address, String birthdate) {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://615dbb7b12571a0017207864.mockapi.io/api/")
@@ -85,7 +84,7 @@ public class AddStudentActivity extends AppCompatActivity {
         JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 
         // passing data from our text fields to our modal class.
-        ListStudent modal = new ListStudent(id, fullName, phone, email, gender, address, birthdate);
+        ListStudent modal = new ListStudent(fullName, phone, email, gender, address, birthdate);
 
         // calling a method to create a post and passing our modal class.
         Call<ListStudent> call = jsonPlaceHolderApi.createStudent(modal);
@@ -95,6 +94,9 @@ public class AddStudentActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call<ListStudent> call, Response<ListStudent> response) {
+                Intent intent=new Intent(AddStudentActivity.this,Students.class);
+                startActivity(intent);
+
                 Toast.makeText(AddStudentActivity.this, "Create new student successfully", Toast.LENGTH_SHORT).show();
             }
 

@@ -20,14 +20,6 @@
             android:orientation="vertical"
             android:gravity="center" >
 
-           <!--<ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="242dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginBottom="15dp"
-                app:srcCompat="@drawable/logo_mba" />-->
-
             <TextView
                 android:id="@+id/icon"
                 android:layout_width="wrap_content"
@@ -36,20 +28,9 @@
                 android:text="Add New Student"
                 android:textColor="@color/login_form_details"
                 android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
                 android:textSize="40dp"
                 android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/txtID"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/et_bg"
-                android:textColor="@color/login_form_details"
-                android:textSize="20dp"
-                android:hint="Add ID"
-                android:padding="16dp"
-                android:textColorHint="@color/login_form_details" />
 
             <EditText
                 android:id="@+id/txtFullName"

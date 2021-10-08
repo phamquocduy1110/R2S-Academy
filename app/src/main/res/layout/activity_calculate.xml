@@ -120,6 +120,17 @@
                 android:textAllCaps="false"
                 android:padding="16dp" />
 
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:text="Cancel"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:padding="16dp" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
